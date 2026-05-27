@@ -6,15 +6,39 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>Forms</h1>
-    <form action="/autenticar">
+    <h2>Login</h2>
+    
+    <form action="{{url_for('recebedados')}}" method="post">
         <label>Nome: </label>
-        <input type="text" name="nome">
-        <label>Curso: </label>
-        <input type="text" name="curso">
-        <label>Cidade: </label>
-        <input type="text" name="cidade">
-        <button type="submit">Entrar</button>
+        <input type="text" name="nome"><br>
+
+        <label>Senha: </label>
+        <input type="password" name="senha"><br>
+
+        <label>E-mail: </label>
+        <input type="text" name="email"><br>
+
+        <label>Estado:</label>
+        <select name="estado">
+            <option> Selecione seu estado </option>
+            <option value="RN"> Rio Grande do Norte</option>
+            <option value="PB"> Paraíba</option>
+            <option value="PE"> Pernambuco</option>
+            <option value="CE"> Ceará</option>
+        </select><br>
+
+        <label>Qual a sua formação?:</label><br>
+        <input type="radio" name="formacao" value="fundamental"> Ensino Fundamental<br>
+        <input type="radio" name="formacao" value="medio"> Ensino Médio<br>
+        <input type="radio" name="formacao" value="superior"> Ensino Superior<br>
+
+        <label>Selecione as modalidades de interesse:</label><br> 
+        <input type="checkbox" name="modalidades" value="Natação"> Natação<br>
+        <input type="checkbox" name="modalidades" value="Vôlei"> Vôlei<br>
+        <input type="checkbox" name="modalidades" value="Futebol"> Futebol<br>
+        <input type="checkbox" name="modalidades" value="Judô"> Judô<br>
+
+        <button type="submit">Enviar</button>
     </form>
 
 </body>
